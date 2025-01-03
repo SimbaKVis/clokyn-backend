@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const sequelize = require('./config/db');
+const authRoutes = require('./routes/auth'); 
 
 dotenv.config();
 
@@ -15,6 +16,9 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send('Clokyn API is running...');
 });
+
+// Use Routes
+app.use('/api', authRoutes); // Mount the auth.js routes at /api
 
 // Sync Sequelize models to the database
 sequelize.sync().then(() => {
