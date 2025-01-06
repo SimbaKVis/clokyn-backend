@@ -12,6 +12,7 @@
   "type": "commonjs",
   "description": "Clokyn is a workforce management system designed to handle employee shift schedulinging.",
   "dependencies": {
+    "axios": "^1.7.9",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -25,7 +26,6 @@
     "react-dom": "^18.3.1",
     "sequelize": "^6.37.5"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SimbaKVis/clokyn-backend.git"

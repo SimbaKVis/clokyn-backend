@@ -8,6 +8,7 @@ const User = sequelize.define('User', {
   emailAddress: DataTypes.STRING,
   role: DataTypes.CHAR,
   eligibleShifts: DataTypes.ARRAY(DataTypes.UUID),
+  password: { type: DataTypes.STRING },
   createdDate: DataTypes.DATE,
   updatedDate: DataTypes.DATE
 });

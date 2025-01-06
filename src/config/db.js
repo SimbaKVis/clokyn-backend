@@ -15,4 +15,13 @@ sequelize.authenticate()
     console.error('Unable to connect to the database:', err);
   });
 
+// Force sync (drops existing tables and recreates them based on the model)
+sequelize.sync({ force: false }) // This will drop and recreate tables
+  .then(() => {
+    console.log('Tables have been recreated!');
+  })
+  .catch((err) => {
+    console.error('Error syncing tables:', err.message);
+  });
+
 module.exports = sequelize;

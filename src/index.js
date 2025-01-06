@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Test Route
 app.get('/', (req, res) => {
-    res.send('Clokyn API is running...');
+    res.send('Backend server running...');
 });
 
 // Use Routes
